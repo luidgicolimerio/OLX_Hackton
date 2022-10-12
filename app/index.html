@@ -5,30 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OLX_FouWay</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
-        <img src="../img/olx-logo-13 1.png" alt="OLX">
-        <div>
-            <img src="../img/Iconglob.png" alt="glob">
-            <img src="../img/Iconlist.png" alt="list">
+        <div class="container">
+            <img class="size_logo" src="../img/olx-logo-13 1.png" alt="OLX">
+                <div class="options">
+                 <div class="icon_await">   
+                  <img class="size_icon" src="../img/Iconglob.png" alt="glob">
+                 </div>
+                 <div class="icon_select">
+                  <img class="size_icon" src="../img/Iconlist.png" alt="list">
+                 </div>
+                </div>
+            <img src="../img/Iconfilter.png" alt="filter">
         </div>
-        <img src="../img/Iconfilter.png" alt="filter">
     </header>
     <section>
         <div>
-            <h2>Rio de Janeiro</h2>
-            <div>
+            <h2 class="local">Rio de Janeiro</h2>            
+            <div class="list_anuncio">
                 <ul>
                     <li>
-                        <div class="Anúncio">
-                            <img src="" alt="Casa">
-                            <h3>casa-aluguel(Tipo)</h3>  
-                            <img src="" alt="VR">
-                            <h2>R$1.200,00(Valor)</h2>
-                            <h3>3 queartos - 70m^2(Descrição)</h3>
-                            <img src="" alt="GPS">
-                            <h3>Rua General Canabarro, 401 - Tijuca(Local)</h3>
+                        <div class="anuncio">
+                            <img class="anuncio_casa" src="../img/imgcasa.webp" alt="Casa">
+                            <div class="anuncio_tipo">
+                                <h3 class="tipo">casa-aluguel</h3>  
+                                <img src="/img/iconVR.png" alt="VR">
+                            </div>
+                            <h2 class="valor">R$1.200,00</h2>
+                            <h3 class="descriçao">3 quartos - 70m²</h3>
+                            <div class="anuncio_local">
+                               <img class="size_gps"src="../img/icongps.png" alt="GPS">
+                               <h3 class="local">Rua General Canabarro, 401 - Tijuca</h3>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="anuncio">
+                            <img class="anuncio_casa" src="../img/Casa2.jpeg" alt="Casa">
+                            <div class="anuncio_tipo">
+                                <h3 class="tipo">casa-aluguel</h3>  
+                                <img src="/img/iconVR.png" alt="VR">
+                            </div>
+                            <h2 class="valor">R$3.000,00</h2>
+                            <h3 class="descriçao">5 quartos - 120m²</h3>
+                            <div class="anuncio_local">
+                               <img class="size_gps"src="../img/icongps.png" alt="GPS">
+                               <h3 class="local">Rua Aleatória, 312 - Botafogo</h3>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -36,7 +62,28 @@
         </div>
     </section>
     <footer>
-
+            <ul class="footer_list">
+                <li>
+                    <img src="/img/iconhome.png" alt="Home">
+                    <h2>Início</h2>
+                </li>
+                <li>
+                    <img src="/img/iconbuscar.png" alt="Busca">
+                    <h2>Buscar</h2>
+                </li>
+                <li>
+                    <img src="/img/iconfav.png" alt="Favorito">
+                    <h2>Favoritos</h2>
+                </li>
+                <li>
+                    <img src="/img/iconanuncie.png" alt="Anuncie">
+                    <h2>Anuncie</h2>
+                </li>
+                <li>
+                    <img src="/img/iconperfil.png" alt="Perfil">
+                    <h2>Conta</h2>
+                </li>
+            </ul>
     </footer>
 </body>
 </html>
