@@ -93,7 +93,7 @@ footer{
     background-color: white;
     width: 100%;
     height: 100%;
-    top: 92%;
+    top: 93%;
     bottom: 0;
     position: fixed;
 }
@@ -124,6 +124,8 @@ footer img{
     width: 25%;
     height: 70px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: auto;
     background-color: #8431DD;
     float: right;
