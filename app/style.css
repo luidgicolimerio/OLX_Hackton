@@ -1,60 +1,61 @@
-a{
+a {
     text-decoration: none;
 }
 
-html{
-    font-family: Arial, Helvetica, sans-serif;
+html {
+    font-family: 'Poppins', sans-serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-#div{
+#div {
     display: flex;
     justify-content: space-between;
     padding: 25px;
 }
 
-#centro{
+#centro {
     padding-top: 35px;
 }
 
-#infoBox{
+#infoBox {
     display: flex;
 }
 
-#ButtonVRDiv{
+#ButtonVRDiv {
     width: 100px;
     height: 50px;
     filter: brightness(0) invert(1);
     margin: auto;
 }
 
-body{
+body {
     background-color: #F5F5F5;
 }
 
-header{
+header {
     background-color: #FFFF;
     width: 100%;
     height: 9%;
     margin-bottom: 10px;
     position: fixed;
-    box-shadow: 0 4px 15px 0 rgba(0,0,0,.6);
-}
-.container{
-display: flex;
-justify-content: space-between;
-padding: 15px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .6);
 }
 
-.anuncios{
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.anuncios {
     padding-top: 50px;
 }
 
-.options{
+.options {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,11 +65,13 @@ padding: 15px;
     border-radius: 17.5px;
     padding: 2px;
 }
-.size_logo{
+
+.size_logo {
     width: 53px;
     height: 28px;
 }
-.icon_await{
+
+.icon_await {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,36 +79,42 @@ padding: 15px;
     height: 36px;
     border-radius: 18px;
 }
-.icon_select{
+
+.icon_select {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#6D0AD6;
+    background-color: #6D0AD6;
     width: 46px;
     height: 36px;
     border-radius: 18px;
 }
-.size_icon{
+
+.size_icon {
     max-width: 25px;
     max-height: 25px;
 }
-.local{
+
+.local {
     font-weight: 300;
     color: #616161;
     font-size: 14px;
     line-height: 17px;
     padding: 20px;
 }
-.list_anuncio{
+
+.list_anuncio {
     display: flex;
     flex-direction: column;
     padding: 10px;
     align-items: center;
 }
-.list_anuncio ul{
+
+.list_anuncio ul {
     list-style: none;
 }
-.anuncio{
+
+.anuncio {
     display: flex;
     flex-direction: column;
     width: 334px;
@@ -115,14 +124,16 @@ padding: 15px;
     padding: 20px;
     margin-bottom: 50px;
 }
-.anuncio_casa{
+
+.anuncio_casa {
     padding: 0;
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
 
     width: 100%;
 }
-.anuncio_tipo{
+
+.anuncio_tipo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,20 +141,23 @@ padding: 15px;
     padding-right: 5px;
     padding-top: 10px;
 }
-.tipo{
+
+.tipo {
     font-weight: 400;
     color: #616161;
     font-size: 12px;
     line-height: 14px;
 }
-.valor{
+
+.valor {
     font-weight: 800;
     font-size: 18px;
     line-height: 18px;
     padding-left: 15px;
-    color:#404040;
+    color: #404040;
 }
-.descriçao{
+
+.descriçao {
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
@@ -151,24 +165,28 @@ padding: 15px;
     padding-top: 5px;
     color: #616161;
 }
-.anuncio_local{
+
+.anuncio_local {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-left: 10px;
 }
-.size_gps{
+
+.size_gps {
     color: #8431DD;
     width: 20px;
     height: 24px;
 }
-.line{
+
+.line {
     content: "";
     width: 334px;
     height: 1px;
     background-color: #D9D9D9;
 }
-footer{
+
+footer {
     background-color: white;
     width: 100%;
     height: 100%;
@@ -176,36 +194,38 @@ footer{
     bottom: 0;
     position: fixed;
 }
-footer img{
+
+footer img {
     max-width: 30px;
 }
 
-.footer_list{
-    padding: 15px;
+.footer_list {
+    padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     list-style-type: none;
 }
-.footer_list li h2{
+
+.footer_list li h2 {
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
     color: #848484;
 }
 
-.infoAnuncio{
+.infoAnuncio {
     background-color: red;
     width: 75%;
     padding: 15px;
 }
 
-.tipoAnuncio{
+.tipoAnuncio {
     font-weight: 200;
     color: rgb(172, 172, 172);
 }
 
-.VRDIV{
+.VRDIV {
     width: 100px;
     height: 80%;
     border-radius: 50px 0px 0px 50px;
