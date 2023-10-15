@@ -6,7 +6,7 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 const HeaderChat = () => {
   return (
-    <div className="fixed h-24 bg-white shadow-md flex pl-5 pr-5 pt-7 w-full">
+    <div className="fixed h-24 bg-white shadow-md flex pl-5 pr-5 w-full items-center">
       <Link href="/">
         <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-2 rounded-full shadow-lg">
           <BsFillArrowLeftCircleFill className="text-2xl" />
@@ -17,7 +17,7 @@ const HeaderChat = () => {
         Olivia
       </div>
       <Image
-        className="h-16 w-16 ml-16 bg-green-500 rounded-full shadow-md"
+        className="h-16 w-16 ml-16 bg-green-300 rounded-full shadow-md"
         src={olivia}
         alt="Olívia"
         height={62}
