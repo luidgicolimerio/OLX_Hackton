@@ -70,7 +70,7 @@ export default function Home() {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="h-14 rounded-xl bg-purple-700 text-white py-2 px-4"
+          className="h-16 rounded-xl bg-purple-700 text-white py-2 px-4"
           disabled={loading === true}
         >
           Enviar

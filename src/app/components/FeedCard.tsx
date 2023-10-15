@@ -58,21 +58,23 @@ const FeedCard = ({ obj }: props) => {
         </div>
 
         <div className="flex flex-col justify-start p-4 md:ml-4">
-          <h5 className="mb-9 text-2xl font-bold tracking-tight text-gray-900 text-left">
+          <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-700 text-left">
             {obj?.name}
           </h5>
+
+            <p
+              className="mb-4 text-black dark:text-black text-left font-bold text-2xl"
+              style={{ overflowWrap: "break-word" }}
+            >
+              {obj?.price != null ? formatPrice(obj.price) : obj?.price}
+            </p>
+
           <div className="flex justify-between items-center">
             <p
               className="font-normal text-gray-700 dark:text-gray-400 text-left"
               style={{ overflowWrap: "break-word" }}
             >
               12 de Outubro, Rio de Janeiro
-            </p>
-            <p
-              className=" text-black dark:text-black text-right font-bold text-2xl"
-              style={{ overflowWrap: "break-word" }}
-            >
-              {obj?.price != null ? formatPrice(obj.price) : obj?.price}
             </p>
           </div>
         </div>
