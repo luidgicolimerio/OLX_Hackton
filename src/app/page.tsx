@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import api from "./services/api";
 import ChatButton from "./components/ChatButton";
 import Nav from "./components/Nav";
+import Popup from "./components/Popup";
 
 export default function Home() {
   const [arr, setArr] = useState<IObj[]>([]);
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <>
       <Header />
+      <Popup />
       <div className="flex flex-col items-center justify-center mb-40 pt-24">
         {arr?.length >= 1 && !loading ? (
           arr.map((obj: IObj, index: number) => (
