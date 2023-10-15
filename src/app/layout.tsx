@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "./components/Nav";
+import { BsFillChatLeftTextFill } from "react-icons/bs";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 

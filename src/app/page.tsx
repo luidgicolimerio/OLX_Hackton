@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import FeedCard, { IObj } from "./components/FeedCard";
 import Header from "./components/Header";
 import api from "./services/api";
+import ChatButton from "./components/ChatButton";
 
 export default function Home() {
   const [arr, setArr] = useState<IObj[]>([]);
@@ -40,6 +41,7 @@ export default function Home() {
           </>
         )}
       </div>
+      <ChatButton/>
     </>
   );
 }
