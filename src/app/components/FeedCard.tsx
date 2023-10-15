@@ -11,6 +11,16 @@ export interface IObj {
   price: number;
 }
 
+export function formatPrice(price: number) {
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+    currencyDisplay: "symbol",
+    currencySign: "accounting",
+  }).format(price);
+}
+
 interface props {
   obj?: IObj;
 }
@@ -62,7 +72,7 @@ const FeedCard = ({ obj }: props) => {
               className=" text-black dark:text-black text-right font-bold text-2xl"
               style={{ overflowWrap: "break-word" }}
             >
-              R$ {obj?.price}
+              {obj?.price != null ? formatPrice(obj.price) : obj?.price}
             </p>
           </div>
         </div>

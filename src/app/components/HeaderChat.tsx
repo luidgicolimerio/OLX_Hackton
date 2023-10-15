@@ -6,22 +6,24 @@ import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 
 const HeaderChat = () => {
   return (
-    <div className="h-24 bg-white shadow-md flex pl-10 pr-10 pt-4 pb-4">
+    <div className="fixed h-24 bg-white shadow-md flex pl-5 pr-5 pt-7 w-full">
+      <Link href="/">
+        <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-2 rounded-full shadow-lg">
+          <BsFillArrowLeftCircleFill className="text-2xl" />
+        </button>
+      </Link>
+
+      <div className="bg-purple-600 text-white font-bold px-3 rounded-md flex text-center justify-center items-center ml-14 mt-2 h-8 w-28">
+        Olivia
+      </div>
       <Image
-        className="h-16 w-16"
+        className="h-16 w-16 ml-16 bg-green-500 rounded-full shadow-md"
         src={olivia}
         alt="Olívia"
         height={62}
         width={62}
       />
-      <div className="bg-purple-600 text-white font-bold px-3 rounded-md flex text-center justify-center items-center ml-8 mt-4 h-8 w-28">Olivia</div>
       {/* <div className="w-16 h-12 bg-gray-200 rounded-3xl shadow-xl">a</div> */}
-      <Link href='/'>
-        <div className="fixed bottom-32 right-4"/>
-        <button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-5 px-5 rounded-full shadow-lg">
-        <BsFillArrowLeftCircleFill className="text-2xl"/>
-        </button>
-      </Link>
     </div>
   );
 };

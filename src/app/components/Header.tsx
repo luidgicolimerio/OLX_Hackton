@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="h-24 bg-white shadow-md flex pl-10 pr-10 pt-4 pb-4">
+    <div className="h-24 fixed w-full bg-white shadow-md flex pl-10 pr-10 pt-4 pb-4">
       <Image
         className="h-8 w-16 mt-4"
         src={logo}
