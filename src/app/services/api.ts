@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://froesmhs.com/api-olx-hackathon-2023/api/",
+  baseURL: "https://froesmhs.com/olx/public/api/",
   headers: {
     "Content-Type": "application/json",
     timeout: 1000,
