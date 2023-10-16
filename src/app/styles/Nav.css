@@ -1,0 +1,27 @@
+footer {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 93%;
+  bottom: 0;
+  position: fixed;
+}
+
+footer img {
+  max-width: 30px;
+}
+
+.footer_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.footer_list:nth-last-child(1) {
+  margin-bottom: 50px;
+}
+
+.text-purple-olx {
+  color: #6e0ad6;
+}

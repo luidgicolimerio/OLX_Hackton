@@ -1,0 +1,86 @@
+import Link from "next/link";
+import Image from "next/image";
+// import Skeleton from "react-loading-skeleton";
+// import "react-loading-skeleton/dist/skeleton.css";
+
+export interface IObj {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  price: number;
+}
+
+export function formatPrice(price: number) {
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+    currencyDisplay: "symbol",
+    currencySign: "accounting",
+  }).format(price);
+}
+
+interface props {
+  obj?: IObj;
+}
+
+const FeedCard = ({ obj }: props) => {
+  return (
+    <>
+      <Link
+        href="/#"
+        // state={{ id: obj?.id }}
+        className="w-11/12 m-6 items-center bg-white border border-gray-200 rounded-xl shadow-xl md:flex-row"
+      >
+        <div className="flex-shrink-0">
+          {obj ? (
+            <>
+              <Image
+                className="object-cover w-full rounded-t-lg h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                src={obj.image}
+                width={192}
+                height={192}
+                alt="aa"
+              />
+            </>
+          ) : (
+            <div className="flex justify-center items-center h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg">
+              <Image
+                className="object-cover w-full rounded-t-lg h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                src="https://flowbite.com/docs/images/blog/image-4.jpg"
+                width={192}
+                height={192}
+                alt="aa"
+              />
+            </div>
+          )}
+        </div>
+
+        <div className="flex flex-col justify-start p-4 md:ml-4">
+          <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-700 text-left">
+            {obj?.name}
+          </h5>
+
+            <p
+              className="mb-4 text-black dark:text-black text-left font-bold text-2xl"
+              style={{ overflowWrap: "break-word" }}
+            >
+              {obj?.price != null ? formatPrice(obj.price) : obj?.price}
+            </p>
+
+          <div className="flex justify-between items-center">
+            <p
+              className="font-normal text-gray-700 dark:text-gray-400 text-left"
+              style={{ overflowWrap: "break-word" }}
+            >
+              12 de Outubro, Rio de Janeiro
+            </p>
+          </div>
+        </div>
+      </Link>
+    </>
+  );
+};
+
+export default FeedCard;
