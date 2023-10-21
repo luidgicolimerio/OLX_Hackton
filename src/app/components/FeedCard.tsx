@@ -9,6 +9,7 @@ export interface IObj {
   image: string;
   description: string;
   price: number;
+  created_at: string;
 }
 
 export function formatPrice(price: number) {
@@ -21,6 +22,25 @@ export function formatPrice(price: number) {
   }).format(price);
 }
 
+export function formatDate(date: string) {
+  const fdate = new Date(date);
+  const months = [
+    "Janeiro",
+    "Feveveiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+  return `${fdate.getDate()} de ${months[fdate.getMonth()]}`;
+}
+
 interface props {
   obj?: IObj;
 }
@@ -29,7 +49,9 @@ const FeedCard = ({ obj }: props) => {
   return (
     <>
       <Link
-        href="/#"
+        href={{
+          pathname: "/product/" + obj?.id,
+        }}
         // state={{ id: obj?.id }}
         className="w-11/12 m-6 items-center bg-white border border-gray-200 rounded-xl shadow-xl md:flex-row"
       >
@@ -51,7 +73,7 @@ const FeedCard = ({ obj }: props) => {
                 src="https://flowbite.com/docs/images/blog/image-4.jpg"
                 width={192}
                 height={192}
-                alt="aa"
+                alt="Foto do produto"
               />
             </div>
           )}
@@ -62,19 +84,19 @@ const FeedCard = ({ obj }: props) => {
             {obj?.name}
           </h5>
 
-            <p
-              className="mb-4 text-black dark:text-black text-left font-bold text-2xl"
-              style={{ overflowWrap: "break-word" }}
-            >
-              {obj?.price != null ? formatPrice(obj.price) : obj?.price}
-            </p>
+          <p
+            className="mb-4 text-black dark:text-black text-left font-bold text-2xl"
+            style={{ overflowWrap: "break-word" }}
+          >
+            {obj?.price != null ? formatPrice(obj.price) : obj?.price}
+          </p>
 
           <div className="flex justify-between items-center">
             <p
               className="font-normal text-gray-700 dark:text-gray-400 text-left"
               style={{ overflowWrap: "break-word" }}
             >
-              12 de Outubro, Rio de Janeiro
+              {formatDate(obj?.created_at != null ? obj.created_at : "")}
             </p>
           </div>
         </div>

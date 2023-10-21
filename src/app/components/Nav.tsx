@@ -14,7 +14,7 @@ const Nav = () => {
         </Link>
       </div>
       <div className="flex items-center justify-center w-1/4">
-        <Link href="/#">
+        <Link href="/chat">
           <BsSearch className="text-2xl w-full text-purple-olx" />
           <p className="mt-2 text-sm text-gray-500">Buscar</p>
         </Link>
@@ -26,7 +26,7 @@ const Nav = () => {
         </Link>
       </div>
       <div className="flex items-center justify-center w-1/4">
-        <Link href="/#">
+        <Link href="/create">
           <BsMegaphone className="text-2xl w-full text-purple-olx" />
           <p className="mt-2 text-sm text-gray-500">Anuncie</p>
         </Link>
