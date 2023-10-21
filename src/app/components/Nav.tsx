@@ -6,7 +6,7 @@ import "../styles/Nav.css";
 
 const Nav = () => {
   return (
-    <div className="shadow-lg h-24 fixed bottom-5 left-0 right-0 flex items-center justify-between bg-slate-100 text-black bg-opacity-50 backdrop-blur-md p-4 z-10 rounded-xl mx-auto w-11/12">
+    <div className="shadow-lg h-24 fixed bottom-5 left-0 right-0 flex items-center justify-between bg-slate-100 text-black bg-opacity-50 backdrop-blur-md p-4 z-10 rounded-xl mx-auto w-11/12 lg:max-w-xl">
       <div className="flex items-center justify-center w-1/4">
         <Link href="/">
           <BsListUl className="text-2xl w-full text-purple-olx" />

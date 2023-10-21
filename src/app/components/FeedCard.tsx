@@ -56,13 +56,13 @@ const FeedCard = ({ obj }: props) => {
           router.push(`/product?pid=${obj?.id}`);
         }}
         // state={{ id: obj?.id }}
-        className="w-11/12 m-6 items-center bg-white border border-gray-200 rounded-xl shadow-xl md:flex-row"
+        className="w-11/12 m-6 items-center bg-white border border-gray-200 rounded-xl shadow-xl md:flex-row lg:flex"
       >
         <div className="flex-shrink-0">
           {obj ? (
             <>
               <Image
-                className="object-cover w-full rounded-t-lg h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                className="object-cover w-full rounded-t-lg h-56 lg:w-80 lg:rounded-md"
                 src={obj.image}
                 width={192}
                 height={192}
@@ -70,9 +70,9 @@ const FeedCard = ({ obj }: props) => {
               />
             </>
           ) : (
-            <div className="flex justify-center items-center h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg">
+            <div className="flex justify-center items-center h-56 lg:w-80 lg:h-100">
               <Image
-                className="object-cover w-full rounded-t-lg h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+                className="object-cover w-full rounded-t-lg h-56 lg:w-80 "
                 src="https://flowbite.com/docs/images/blog/image-4.jpg"
                 width={192}
                 height={192}

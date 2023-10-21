@@ -8,14 +8,10 @@ const Feed = () => {
   const [loading, setLoading] = useState(true);
 
   async function getFeed() {
-    await api
-      .get("/products")
-      .then((res) => {
-        setArr(res.data.products);
-        setLoading(false);
-        console.log(arr);
-      })
-      .catch((e) => console.log(e));
+    await api.get("/products").then((res) => {
+      setArr(res.data.products);
+      setLoading(false);
+    });
   }
 
   useEffect(() => {

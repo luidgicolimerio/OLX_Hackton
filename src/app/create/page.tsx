@@ -132,7 +132,6 @@ export default function page() {
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
         const errmsg =
           error?.response?.data?.message || "Erro ao cadastrar produto.";
         alert(errmsg);
