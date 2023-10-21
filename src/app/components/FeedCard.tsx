@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 // import Skeleton from "react-loading-skeleton";
 // import "react-loading-skeleton/dist/skeleton.css";
 
@@ -46,11 +47,13 @@ interface props {
 }
 
 const FeedCard = ({ obj }: props) => {
+  const router = useRouter();
+
   return (
     <>
-      <Link
-        href={{
-          pathname: "/product/" + obj?.id,
+      <button
+        onClick={() => {
+          router.push(`/product?pid=${obj?.id}`);
         }}
         // state={{ id: obj?.id }}
         className="w-11/12 m-6 items-center bg-white border border-gray-200 rounded-xl shadow-xl md:flex-row"
@@ -100,7 +103,7 @@ const FeedCard = ({ obj }: props) => {
             </p>
           </div>
         </div>
-      </Link>
+      </button>
     </>
   );
 };

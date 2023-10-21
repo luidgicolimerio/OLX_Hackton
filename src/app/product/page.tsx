@@ -1,4 +1,7 @@
 "use client";
+
+import { useSearchParams } from "next/navigation";
+
 import { BsFillCaretDownFill } from "react-icons/bs";
 import { BsFillCaretUpFill } from "react-icons/bs";
 
@@ -22,13 +25,18 @@ interface IObj {
   created_at: string;
 }
 
-export default function page({ params }: { params: { id: string } }) {
+export default function page() {
   const [data, setData] = useState<IObj | undefined>(undefined);
   const [description, setDescription] = useState(false);
 
+  const searchParams = useSearchParams();
+  const search = searchParams.get("pid");
+
+  console.log(search);
+
   async function getData() {
     await api
-      .get(`/products/${params.id}`)
+      .get(`/products/${search}`)
       .then((r) => {
         setData(r.data.product);
         setDescription(true);
