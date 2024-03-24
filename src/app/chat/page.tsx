@@ -24,7 +24,7 @@ export default function Home() {
     const body = { message: message, arr: arr };
 
     api
-      .post("/messages", body)
+      .post("/olivia", body)
       .then((response) => {
         setArr((prevMessages) => [
           ...prevMessages,
